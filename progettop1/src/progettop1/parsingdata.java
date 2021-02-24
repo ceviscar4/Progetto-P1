@@ -10,7 +10,7 @@ public class parsingdata {
 		
 		private String Apikey;
 		
-		//costruttore della della classe Parsing
+		//costruttore della  classe Parsing
 		
 		public Parsing(String Apikey) {
 			this.Apikey=Apikey;
