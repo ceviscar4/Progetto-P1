@@ -2,9 +2,6 @@ package progettop1;
 
 public class parsingdata {
 	//parsingdata sarà la superclasse grazie alla quale i parser otterranno i dati di openweather
-	
-	
-	public class Parsing{
 		
 		//qui è presente la stringa che prenderà la key della api di openweather
 		
@@ -12,8 +9,8 @@ public class parsingdata {
 		
 		//costruttore della  classe Parsing
 		
-		public Parsing(String Apikey) {
-			this.Apikey=Apikey;
+		public parsingdata(String Apikey) {
+			this.Apikey="90d633aa3a3b9ee7a810ac3bf027dbd7";
 		}
 
 		
@@ -26,5 +23,3 @@ public class parsingdata {
 			Apikey = apikey;
 		}
 	}
-
-}
