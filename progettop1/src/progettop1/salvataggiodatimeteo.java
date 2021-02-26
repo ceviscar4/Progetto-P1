@@ -20,7 +20,14 @@ public class salvataggiodatimeteo extends parsingdata{
 		
 	}
 	
-	
+	public String URLGenerator(String nomecittà, String units)
+	{
+		String URL = "https://api.openweathermap.org/data/2.5/find?"; //Crea URL 
+		URL += ("?q="+nomecittà);
+		URL += ("&appid=" + super.getApikey());
+		URL += ("&units=" + units);
+		return URL;
+		}
 	
 	
 	
@@ -32,15 +39,15 @@ public class salvataggiodatimeteo extends parsingdata{
 	public Vector datiattuali (String nomecittà) throws MalformedURLException, IOException 
 	{
 		
-		Vector vett = new Vector();
+		Vector<String>vett = new <String> Vector();
 
 		URLConnection openWeather = new URL(this.URLGenerator(nomecittà, this.units)).openConnection();
 		BufferedReader in = new BufferedReader(new InputStreamReader(openWeather.getInputStream()));
 		
 		String inputLine = in.readLine();
 		vett.add(inputLine);
-		for (Object elemento : vett) {
-			   System.out.print(elemento);
+		for (String elemento : vett) {
+			   System.out.println(elemento);
 			}
 		return vett;
 		
@@ -79,13 +86,7 @@ public class salvataggiodatimeteo extends parsingdata{
 		}
 	return ritorno;*/
 		
-}public String URLGenerator(String nomecittà, String units)
-	{
-		String URL = "https://api.openweathermap.org/data/2.5/find?"; //Crea URL 
-		URL += ("?q"+nomecittà);
-		URL += ("&appid=" + super.getApikey());
-		URL += ("&units=" + units);
-		return URL;
-	}
+}
+	
 
 }
