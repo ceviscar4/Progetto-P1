@@ -7,6 +7,13 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 public class salvataggiodati {
 
 	public static void main(String[] args)  {
@@ -33,14 +40,19 @@ public class salvataggiodati {
 
 	            in.close();
 	            System.out.println(buffer);
+		   }
 	            
-	        }
-
+	  
 	        catch(IOException e) {
 	            System.err.println(e.getMessage());
 	            e.printStackTrace();
 	            System.exit(100);
 	        }
+		   
+		   
+
+		 
+		  
 
 	        /*catch(MalformedURLException me) {
 	            System.err.println(me.getMessage());
