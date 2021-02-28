@@ -21,7 +21,7 @@ public class chiamataurl {
 				try {
 
 					HttpURLConnection openConnection = (HttpURLConnection) new URL(url).openConnection();
-					openConnection.setRequestMethod("POST");
+					openConnection.setRequestMethod("london");
 					openConnection.setRequestProperty("appid",
 							"aa0854721ceebf98625f7753971cd283");
 					openConnection.setRequestProperty("Content-Type", "application/json");
